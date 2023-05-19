@@ -39,8 +39,8 @@ dependencies:
   '@emotion/styled': 11.10.6_wk7udrqmfetfur7bcmggr6k6fm
   '@mui/material': 5.11.16_zy4fdalh3zntkbuswwsbylvxqe
   '@tanstack/react-query': 4.28.0_biqbaboplfbrettd7655fr4n2y
-  '@xod/mui-layout': github.com/xodder/mui-layout/41592bb4efa3dca90c8c5cf48d9d0481aa51c751_46gwejg6dffllellg4ffkuclsi
-  '@xod/mui-loadable-content': github.com/xodder/mui-loadable-content/e80ec092be2f6031ae4be4bc1499bba53d0c89db_46gwejg6dffllellg4ffkuclsi
+  '@xod/mui-layout': github.com/xodder/mui-layout/70710eb20df9f0edebd6e1eeebfc319d56eb706e_46gwejg6dffllellg4ffkuclsi
+  '@xod/mui-loadable-content': github.com/xodder/mui-loadable-content/7e4b5dfc8c6ad3eaaa127afb831e2f8dadd69e83_46gwejg6dffllellg4ffkuclsi
   '@xod/mui-popupish': github.com/xodder/mui-popupish/9fe0f75a2dcd122abde65d23334987e1079fd7c8_46gwejg6dffllellg4ffkuclsi
   '@xod/tasks': github.com/xodder/tasks/5d09c61736960365386d1f47418f5b70f30993a5_react@18.2.0
   axios: 1.3.5
@@ -3154,9 +3154,9 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  github.com/xodder/mui-layout/41592bb4efa3dca90c8c5cf48d9d0481aa51c751_46gwejg6dffllellg4ffkuclsi:
-    resolution: {tarball: https://codeload.github.com/xodder/mui-layout/tar.gz/41592bb4efa3dca90c8c5cf48d9d0481aa51c751}
-    id: github.com/xodder/mui-layout/41592bb4efa3dca90c8c5cf48d9d0481aa51c751
+  github.com/xodder/mui-layout/70710eb20df9f0edebd6e1eeebfc319d56eb706e_46gwejg6dffllellg4ffkuclsi:
+    resolution: {tarball: https://codeload.github.com/xodder/mui-layout/tar.gz/70710eb20df9f0edebd6e1eeebfc319d56eb706e}
+    id: github.com/xodder/mui-layout/70710eb20df9f0edebd6e1eeebfc319d56eb706e
     name: '@xod/mui-layout'
     version: 1.0.0
     peerDependencies:
@@ -3167,9 +3167,9 @@ packages:
       react: 18.2.0
     dev: false
 
-  github.com/xodder/mui-loadable-content/e80ec092be2f6031ae4be4bc1499bba53d0c89db_46gwejg6dffllellg4ffkuclsi:
-    resolution: {tarball: https://codeload.github.com/xodder/mui-loadable-content/tar.gz/e80ec092be2f6031ae4be4bc1499bba53d0c89db}
-    id: github.com/xodder/mui-loadable-content/e80ec092be2f6031ae4be4bc1499bba53d0c89db
+  github.com/xodder/mui-loadable-content/7e4b5dfc8c6ad3eaaa127afb831e2f8dadd69e83_46gwejg6dffllellg4ffkuclsi:
+    resolution: {tarball: https://codeload.github.com/xodder/mui-loadable-content/tar.gz/7e4b5dfc8c6ad3eaaa127afb831e2f8dadd69e83}
+    id: github.com/xodder/mui-loadable-content/7e4b5dfc8c6ad3eaaa127afb831e2f8dadd69e83
     name: '@xod/mui-loadable-content'
     version: 1.0.0
     peerDependencies:

@@ -1,11 +1,10 @@
 import HomePageImpl from '~/components/impls/home';
-import PublicLayout from '~/components/layouts/public-layout';
+import MainLayout from '~/components/layouts/main-layout';
 
 function HomePage() {
   return <HomePageImpl />;
 }
 
-HomePage.Layout = PublicLayout;
-// HomePage.Guard = DefaultGuard;
+HomePage.Layout = MainLayout;
 
 export default HomePage;

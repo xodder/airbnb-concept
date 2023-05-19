@@ -1,10 +1,10 @@
 import { createTheme } from '@mui/material';
-import { Roboto } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 const { breakpoints } = createTheme();
 
-const font = Roboto({
-  weight: ['400', '500', '700', '900'],
+const font = Inter({
+  weight: ['400', '500', '700', '900', '800'],
   subsets: ['latin'],
 });
 
@@ -12,12 +12,30 @@ const theme = createTheme({
   typography: {
     fontFamily: font.style.fontFamily,
   },
-  palette: {},
+  palette: {
+    primary: {
+      main: 'rgb(255, 56, 92)',
+    },
+  },
   components: {
     MuiAppBar: {
       styleOverrides: {
         colorDefault: {
           backgroundColor: '#fff',
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
         },
       },
     },
