@@ -1,5 +1,5 @@
 {
-  "name": "next-mui-app",
+  "name": "airbnb-concept",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",

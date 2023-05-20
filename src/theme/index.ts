@@ -15,6 +15,10 @@ const theme = createTheme({
   palette: {
     primary: {
       main: 'rgb(255, 56, 92)',
+      dark: 'rgb(212, 59, 81)',
+    },
+    background: {
+      paper: 'rgb(243, 243, 242)',
     },
   },
   components: {
@@ -29,6 +33,29 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
+        },
+      },
+    },
+    MuiToggleButtonGroup: {
+      styleOverrides: {
+        root: {
+          background: 'rgb(243, 243, 242)',
+        },
+      },
+    },
+    MuiToggleButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 'inherit',
+          border: 'none',
+          '&.Mui-selected': {
+            color: 'white',
+            background: 'rgb(17, 17, 17)',
+            borderRadius: 'inherit !important',
+            '&:hover': {
+              background: 'rgb(27, 27, 27)',
+            },
+          },
         },
       },
     },

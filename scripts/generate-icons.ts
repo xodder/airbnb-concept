@@ -45,24 +45,28 @@ async function main() {
       `${componentFileName}.ts`
     );
 
-    const data = (await extractSvgData(sourceFilePath))!;
-    const iconPath = data.paths.join(' ');
+    try {
+      const data = (await extractSvgData(sourceFilePath))!;
+      const iconPath = data.paths.join(' ');
 
-    const content = data.complex
-      ? `import Icon from '../assets/${sourceFileName}';
+      const content = data.complex
+        ? `import Icon from '../assets/${sourceFileName}';
 import createIcon from '../utils/create-icon';
 
-export default createIcon(Icon, '${componentName}', '${data.viewBox!}');`
-      : `import createIcon from '../utils/create-icon';
+export default createIcon(Icon, '${componentName}', '${data.viewBox}');`
+        : `import createIcon from '../utils/create-icon';
 
-export default createIcon('${iconPath}', '${componentName}', '${data.viewBox!}');
+export default createIcon('${iconPath}', '${componentName}', '${data.viewBox}');
 `;
 
-    indexFileContent += `export { default as ${componentName} } from './generated/${componentFileName}';\n`;
+      indexFileContent += `export { default as ${componentName} } from './generated/${componentFileName}';\n`;
 
-    await writeContentToFile(componentFilePath, content);
+      await writeContentToFile(componentFilePath, content);
 
-    info__('created %s', componentFileName);
+      info__('created %s', componentFileName);
+    } catch (e) {
+      info__(e.message);
+    }
   }
 
   await writeContentToFile(indexFilePath, indexFileContent);
@@ -75,28 +79,36 @@ async function extractSvgData(filePath: string) {
     const content = (await fs.readFile(filePath)).toString();
 
     // extract viewBox
-    const viewBox = content.match(/viewBox="([\d\s.]+)"/)?.[1];
+    let viewBox = content.match(/viewBox="([\d\s.]+)"/)?.[1];
 
     if (!viewBox) {
-      error__('could not extract viewBox in %s', filePath);
+      const width = content.match(/width="([\d.]+)"/)?.[1];
+      const height = content.match(/height="([\d.]+)"/)?.[1];
+
+      if (!width || !height) {
+        throw new Error(`could not extract viewBox in ${filePath}`);
+        return;
+      }
+
+      viewBox = `0 0 ${width} ${height}`;
     }
 
     const paths = [];
     const complex = content.match(/<circle/g) !== null;
-    const pathDecls = content.match(/<path.+?\/>/g);
+    const pathDecls = content.match(/<path.+?\/?>/g);
 
     if (!pathDecls) {
-      error__('could not extract paths in %s', filePath);
+      throw new Error(`could not extract paths in ${filePath}`);
     }
 
-    for (const pathDecl of pathDecls!) {
+    for (const pathDecl of pathDecls) {
       const d = pathDecl.match(/d="([^"]+)"/g)?.[0].slice(3, -1);
       paths.push(d);
     }
 
     return { viewBox, paths, complex };
   } catch (e) {
-    error__('Could not open file %s', filePath);
+    throw new Error(`Could not open file ${filePath}`);
   }
 }
 

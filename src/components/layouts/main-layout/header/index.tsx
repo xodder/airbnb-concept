@@ -7,6 +7,7 @@ import TopLevelNavigation from './top-level-navigation';
 function Header() {
   return (
     <AppBar
+      position="relative"
       color="default"
       elevation={0}
       sx={{ borderBottom: '1px solid', borderColor: 'grey.300' }}
