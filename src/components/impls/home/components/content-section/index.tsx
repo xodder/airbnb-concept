@@ -11,7 +11,7 @@ import usePlaceSelection from '../../helpers/use-place-selection';
 import { Place } from '../../types';
 
 function ContentSection() {
-  const [_, selectPlace] = usePlaceSelection();
+  const [, selectPlace] = usePlaceSelection();
 
   return (
     <Box p={4} flex={1}>
