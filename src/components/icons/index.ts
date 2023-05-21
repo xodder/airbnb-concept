@@ -13,6 +13,7 @@ export { default as SkiingOutline } from './generated/skiing-outline';
 export { default as IslandOutline } from './generated/island-outline';
 export { default as BeachfrontOutline } from './generated/beachfront-outline';
 export { default as Star } from './generated/star';
+export { default as Close } from './generated/close';
 export { default as GridOutline } from './generated/grid-outline';
 export { default as HomesOutline } from './generated/homes-outline';
 export { default as ScheduleCheckOutline } from './generated/schedule-check-outline';

@@ -66,6 +66,11 @@ const theme = createTheme({
         },
       },
     },
+    MuiLink: {
+      defaultProps: {
+        underline: 'none',
+      },
+    },
     MuiCssBaseline: {
       styleOverrides: {
         'html, body': {

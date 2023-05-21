@@ -6,16 +6,22 @@ import IconText from '~/components/shared/icon-text';
 import Image from '~/components/shared/image';
 import cformat from '~/utils/cformat';
 import nformat from '~/utils/nformat';
-import places from './data/places';
-
-type Place = (typeof places)[number];
+import places from '../../data/places';
+import usePlaceSelection from '../../helpers/use-place-selection';
+import { Place } from '../../types';
 
 function ContentSection() {
+  const [_, selectPlace] = usePlaceSelection();
+
   return (
     <Box p={4} flex={1}>
       <Grid columnTemplate="repeat(auto-fill, minmax(240px, 1fr))" spacing={2}>
         {places.map((place) => (
-          <PlaceListItem key={place.id} place={place} />
+          <PlaceListItem
+            key={place.id}
+            place={place}
+            onClick={() => selectPlace(place.id)}
+          />
         ))}
       </Grid>
     </Box>
@@ -24,9 +30,10 @@ function ContentSection() {
 
 type PlaceCardWidgetProps = {
   place: Place;
+  onClick: () => void;
 };
 
-function PlaceListItem({ place }: PlaceCardWidgetProps) {
+function PlaceListItem({ place, onClick }: PlaceCardWidgetProps) {
   return (
     <Column
       position="relative"
@@ -35,6 +42,7 @@ function PlaceListItem({ place }: PlaceCardWidgetProps) {
       border="1px solid"
       borderColor="grey.200"
       height={1}
+      onClick={onClick}
       sx={{
         cursor: 'pointer',
         transition: 'box-shadow 0.25s',
@@ -42,6 +50,7 @@ function PlaceListItem({ place }: PlaceCardWidgetProps) {
           boxShadow: '0 4px 24px 0px rgba(0, 0, 0, 0.08)',
         },
       }}
+      mui
     >
       <AspectRatio value={9 / 16}>
         <Image src={place.photo_urls[0]} alt={place.name} />
@@ -78,10 +87,10 @@ function PlaceListItem({ place }: PlaceCardWidgetProps) {
         <IconButton
           sx={{
             bgcolor: 'white',
-            '&:hover': { bgcolor: 'white' },
+            '&:hover': { bgcolor: 'black', color: 'white' },
           }}
         >
-          <HeartOutline sx={{ fontSize: 16, strokeWidth: 2 }} />
+          <HeartOutline color="inherit" sx={{ fontSize: 16, strokeWidth: 2 }} />
         </IconButton>
       </Box>
     </Column>
