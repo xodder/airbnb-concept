@@ -34,19 +34,17 @@ const places = [
       bath_count: 8,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -56,7 +54,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -68,7 +66,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -80,7 +78,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -92,16 +94,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -207,19 +209,17 @@ const places = [
       bath_count: 4,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -229,7 +229,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -241,7 +241,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -253,7 +253,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -265,16 +269,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -380,19 +384,17 @@ const places = [
       bath_count: 3,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -402,7 +404,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -414,7 +416,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -426,7 +428,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -438,16 +444,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -553,19 +559,17 @@ const places = [
       bath_count: 6.5,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -575,7 +579,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -587,7 +591,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -599,7 +603,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -611,16 +619,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -726,19 +734,17 @@ const places = [
       bath_count: 2.5,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -748,7 +754,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -760,7 +766,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -772,7 +778,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -784,16 +794,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -899,19 +909,17 @@ const places = [
       bath_count: 2,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -921,7 +929,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -933,7 +941,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -945,7 +953,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -957,16 +969,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -1072,19 +1084,17 @@ const places = [
       bath_count: 2,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -1094,7 +1104,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1106,7 +1116,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1118,7 +1128,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1130,16 +1144,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -1245,19 +1259,17 @@ const places = [
       bath_count: 1,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -1267,7 +1279,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1279,7 +1291,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1291,7 +1303,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1303,16 +1319,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -1418,19 +1434,17 @@ const places = [
       bath_count: 1,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -1440,7 +1454,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1452,7 +1466,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1464,7 +1478,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1476,16 +1494,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -1591,19 +1609,17 @@ const places = [
       bath_count: 2,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -1613,7 +1629,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1625,7 +1641,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1637,7 +1653,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1649,16 +1669,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {
@@ -1764,19 +1784,17 @@ const places = [
       bath_count: 3,
     },
     about: [
-      { type: 'h5', content: 'About this space' },
-      { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.',
       },
       { type: 'spacer', sy: 3 },
-      { type: 'h6', content: 'The Space' },
+      { type: 'body2', content: 'The Space', fontWeight: 700 },
       { type: 'spacer', sy: 1 },
       {
-        type: 'body1',
+        type: 'body2',
         color: 'text.secondary',
         content:
           'An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.',
@@ -1786,7 +1804,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-workspace.svg')),
         content: [
-          { type: 'h6', content: 'Dedicated workspace' },
+          { type: 'body2', content: 'Dedicated workspace', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1798,7 +1816,7 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-checkin.svg')),
         content: [
-          { type: 'h6', content: 'Self check-in' },
+          { type: 'body2', content: 'Self check-in', fontWeight: 700 },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1810,7 +1828,11 @@ const places = [
       {
         image_url: extractSrc(require('./assets/ic-schedule-check.svg')),
         content: [
-          { type: 'h6', content: 'Free cancellation before Jul 25' },
+          {
+            type: 'body2',
+            content: 'Free cancellation before Jul 25',
+            fontWeight: 700,
+          },
           { type: 'spacer', sy: 1 },
           {
             type: 'body2',
@@ -1822,16 +1844,16 @@ const places = [
     ],
     amenities: [
       { tag: 'kitchen', label: 'Kitchen' },
-      { tag: 'workspace', label: 'Dedicated workspaces' },
-      { tag: 'tv', label: '55” 4k TV' },
-      { tag: 'dryer', label: 'Free dryer - in unit' },
       { tag: 'balcony', label: 'Private patio or balcony' },
+      { tag: 'ac', label: 'Central air conditioning' },
+      { tag: 'workspace', label: 'Dedicated workspaces' },
       { tag: 'wifi', label: 'Wifi' },
-      { tag: 'park', label: '1 parking space' },
-      { tag: 'wash', label: 'Free washer - in unit' },
-      { tag: 'ac', label: 'Centrail air conditioning' },
       { tag: 'heater', label: 'Heating' },
+      { tag: 'tv', label: '55” 4k TV' },
+      { tag: 'park', label: '1 parking space' },
       { tag: 'security', label: 'Security cameras' },
+      { tag: 'dryer', label: 'Free dryer - in unit' },
+      { tag: 'wash', label: 'Free washer - in unit' },
       { tag: 'fan', label: 'Ceiling fans' },
     ],
     reviews: {

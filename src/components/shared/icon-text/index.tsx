@@ -2,7 +2,7 @@ import { Typography, TypographyProps } from '@mui/material';
 import { Row, RowProps } from '@xod/mui-layout';
 import React from 'react';
 
-type IconTextProps = RowProps<React.ElementType> & {
+export type IconTextProps = RowProps<React.ElementType> & {
   icon: any;
   text: string;
   textProps?: TypographyProps;

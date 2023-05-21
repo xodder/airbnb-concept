@@ -9,7 +9,7 @@ type DividerProps = BoxProps & {
 function Divider({
   weight = 1,
   type = 'solid',
-  color = 'default.200',
+  color = 'divider',
   vertical,
   ...props
 }: DividerProps) {

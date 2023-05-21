@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material';
 import { Inter } from 'next/font/google';
 
-const { breakpoints } = createTheme();
+const { breakpoints, shape } = createTheme();
 
 const font = Inter({
   weight: ['400', '500', '600', '700', '900', '800'],
@@ -14,7 +14,8 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: 'rgb(255, 56, 92)',
+      // main: 'rgb(255, 56, 92)',
+      main: 'rgb(212, 59, 81)',
       dark: 'rgb(212, 59, 81)',
     },
     background: {
@@ -33,8 +34,17 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
+          borderRadius: 3 * shape.borderRadius,
+        },
+        colorInherit: {
           backgroundColor: 'white',
         },
+        sizeLarge: {
+          height: 48,
+        },
+      },
+      defaultProps: {
+        disableElevation: true,
       },
     },
     MuiToggleButtonGroup: {
@@ -57,6 +67,13 @@ const theme = createTheme({
               background: 'rgb(27, 27, 27)',
             },
           },
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'white',
         },
       },
     },
