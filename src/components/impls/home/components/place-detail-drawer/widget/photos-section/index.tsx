@@ -49,6 +49,7 @@ function GridImage({ src, column, row }: GridImageProps) {
         alt=""
         borderRadius={3}
         fit="cover"
+        position="center"
         width={1}
         height={1}
       />
