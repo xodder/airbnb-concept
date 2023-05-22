@@ -2,7 +2,7 @@ import { Button, MenuItem, Typography } from '@mui/material';
 import { LocalizationProvider, MobileDatePicker } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Column, Row } from '@xod/mui-layout';
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import { CalendarOutline, Star } from '~/components/icons';
 import Divider from '~/components/shared/divider';
 import IconText from '~/components/shared/icon-text';
@@ -43,10 +43,10 @@ function ReservationSection() {
         </Row>
         <Row gap={2} crossAxisAlignment="center">
           <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DatePickerFieldX label="Check In" defaultValue={new Date()} />
-            <DatePickerFieldX
+            <DatePickerField label="Check In" defaultValue={dayjs()} />
+            <DatePickerField
               label="Check Out"
-              defaultValue={dayjs().add(6, 'd').toDate()}
+              defaultValue={dayjs().add(6, 'd')}
             />
           </LocalizationProvider>
         </Row>
@@ -107,25 +107,28 @@ function FeeWidget({ label, sublabel, amount, emphasized }: FeeWidgetProps) {
   );
 }
 
-type DatePickerFieldXProps = {
+type DatePickerFieldProps = {
   label: string;
-  value?: Maybe<Date>;
-  onChange?: (value: Maybe<Date> | undefined) => void;
-  defaultValue?: Date;
+  value?: Maybe<Dayjs>;
+  onChange?: (value: Maybe<Dayjs> | undefined) => void;
+  defaultValue?: Dayjs;
 };
 
-function DatePickerFieldX({
+function DatePickerField({
   value: valueProp,
   label,
   defaultValue,
   onChange,
-}: DatePickerFieldXProps) {
+}: DatePickerFieldProps) {
   const [value, setValue] = useControlled({
     controlled: valueProp,
     default: defaultValue,
   });
 
-  function handleChange(value: Maybe<Date> | undefined) {
+  console.log(value);
+
+  function handleChange(value: Maybe<Dayjs> | undefined) {
+    console.log('changed');
     setValue(value);
     onChange?.(value);
   }
@@ -133,6 +136,7 @@ function DatePickerFieldX({
   return (
     <MobileDatePicker
       toolbarTitle="Due on"
+      label={label}
       value={value}
       inputFormat="M/DD/YYYY"
       onChange={handleChange}
@@ -141,18 +145,23 @@ function DatePickerFieldX({
         return (
           <PlainTextField
             {...props}
-            label={label}
             InputProps={{
+              ...props.InputProps,
               startAdornment: (
                 <CalendarOutline color="action" sx={{ mr: 2, mt: -0.25 }} />
               ),
-              sx: { cursor: 'pointer' },
-              inputProps: {
-                disabled: true,
-                style: {
-                  pointerEvents: 'none',
-                },
+              sx: {
+                cursor: 'pointer',
+                ...props.InputProps?.sx,
               },
+            }}
+            inputProps={{
+              disabled: true,
+              style: {
+                pointerEvents: 'none',
+                cursor: 'pointer',
+              },
+              ...props.inputProps,
             }}
             fullWidth
           />
