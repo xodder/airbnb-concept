@@ -1,11 +1,12 @@
+import { BoxProps } from '@mui/material';
 import IconText from '~/components/shared/icon-text';
 import Image from '~/components/shared/image';
 
-type SuperHostTagProps = {
+type SuperHostTagProps = BoxProps & {
   bordered?: boolean;
 };
 
-function SuperHostTag({ bordered }: SuperHostTagProps) {
+function SuperHostTag({ bordered, ...props }: SuperHostTagProps) {
   return (
     <IconText
       icon={
@@ -22,6 +23,7 @@ function SuperHostTag({ bordered }: SuperHostTagProps) {
       borderRadius={3}
       px={bordered ? 1.5 : undefined}
       py={bordered ? 0.5 : undefined}
+      {...props}
     />
   );
 }

@@ -24,7 +24,7 @@ function ReservationSection() {
       <Column gap={3}>
         <Row crossAxisAlignment="center" mainAxisAlignment="space-between">
           <Typography>
-            <Typography component="span" variant="h5" fontWeight={800}>
+            <Typography component="span" variant="h5">
               {cformat(pricing.per_night)}
             </Typography>
             <Typography

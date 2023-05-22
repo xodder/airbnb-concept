@@ -58,7 +58,7 @@ function CloseButton({ onClick }: CloseButtonProps) {
           '&:hover': { bgcolor: 'black', color: 'white' },
         }}
       >
-        <Close color="inherit" sx={{ fontSize: '0.8rem' }} />
+        <Close color="inherit" fontSize="xsmall" />
       </IconButton>
     </Box>
   );

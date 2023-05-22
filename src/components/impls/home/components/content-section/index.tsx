@@ -92,9 +92,9 @@ function PlaceListItem({ place, onClick }: PlaceCardWidgetProps) {
         >
           <HeartOutline
             color={liked ? 'primary' : 'inherit'}
+            fontSize="xsmall"
             onClick={() => setLiked((x) => !x)}
             sx={{
-              fontSize: '1rem',
               strokeWidth: 2,
               fill: liked ? 'currentColor' : undefined,
             }}

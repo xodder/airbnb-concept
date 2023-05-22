@@ -6,6 +6,7 @@ import {
   GuestOutline,
   HeartOutline,
   ShowerOutline,
+  Upload,
 } from '~/components/icons';
 import IconText from '~/components/shared/icon-text';
 import { useActivePlace } from '../../provider';
@@ -15,8 +16,8 @@ function InfoSection() {
   const place = useActivePlace();
 
   return (
-    <Column crossAxisAlignment="start">
-      <SuperHostTag bordered />
+    <Column>
+      <SuperHostTag sx={{ alignSelf: 'start' }} bordered />
       <Spacer sy={2} />
       <Row gap={2} crossAxisAlignment="start" mainAxisAlignment="space-between">
         <Column gap={1}>
@@ -25,9 +26,12 @@ function InfoSection() {
             {place.location.name}
           </Typography>
         </Column>
-        <Row>
-          <IconButton>
-            <HeartOutline />
+        <Row gap={1} crossAxisAlignment="center">
+          <IconButton sx={{ bgcolor: 'background.paper' }}>
+            <Upload fontSize="xsmall" />
+          </IconButton>
+          <IconButton sx={{ bgcolor: 'background.paper' }}>
+            <HeartOutline fontSize="xsmall" sx={{ strokeWidth: 2.5 }} />
           </IconButton>
         </Row>
       </Row>
@@ -62,7 +66,7 @@ type FeatureWidgetProps = {
 function FeatureWidget({ Icon, label }: FeatureWidgetProps) {
   return (
     <IconText
-      icon={<Icon sx={{ fontSize: '1rem' }} />}
+      icon={<Icon fontSize="xsmall" />}
       text={label}
       textProps={{ variant: 'caption', sx: { mt: 0.5 } }}
     />

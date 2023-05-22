@@ -1,16 +1,23 @@
 import { createTheme } from '@mui/material';
 import { Inter } from 'next/font/google';
 
-const { shape, typography, spacing } = createTheme();
+const { typography } = createTheme();
 
 const font = Inter({
   weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
 });
 
+declare module '@mui/material/SvgIcon' {
+  interface SvgIconPropsSizeOverrides {
+    xsmall: true;
+  }
+}
+
 const theme = createTheme({
   typography: {
     fontFamily: font.style.fontFamily,
+    h5: { fontWeight: 800 },
     h6: { ...typography.body1, fontWeight: 700 },
   },
   palette: {
@@ -32,10 +39,10 @@ const theme = createTheme({
     },
     MuiButton: {
       styleOverrides: {
-        root: {
+        root: ({ theme }) => ({
           textTransform: 'none',
-          borderRadius: 3 * shape.borderRadius,
-        },
+          borderRadius: 3 * theme.shape.borderRadius,
+        }),
         colorInherit: {
           backgroundColor: 'white',
         },
@@ -49,19 +56,19 @@ const theme = createTheme({
     },
     MuiToggleButtonGroup: {
       styleOverrides: {
-        root: {
+        root: ({ theme }) => ({
           background: 'rgb(243, 243, 242)',
           border: 'none',
-          borderRadius: 3 * shape.borderRadius,
-        },
+          borderRadius: 3 * theme.shape.borderRadius,
+        }),
       },
     },
     MuiToggleButton: {
       styleOverrides: {
-        root: {
+        root: ({ theme }) => ({
           borderRadius: 'inherit',
           border: 'none',
-          p: spacing(1.8),
+          p: theme.spacing(1.8),
           '&.Mui-selected': {
             color: 'white',
             background: 'rgb(17, 17, 17)',
@@ -70,7 +77,7 @@ const theme = createTheme({
               background: 'rgb(27, 27, 27)',
             },
           },
-        },
+        }),
       },
     },
     MuiPaper: {
@@ -96,6 +103,12 @@ const theme = createTheme({
       defaultProps: {
         fontSize: 'small',
       },
+      variants: [
+        {
+          props: { fontSize: 'xsmall' },
+          style: { fontSize: '1rem' },
+        },
+      ],
     },
     MuiCssBaseline: {
       styleOverrides: {
