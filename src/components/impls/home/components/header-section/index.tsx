@@ -16,8 +16,11 @@ import MinusOutline from '~/components/icons/generated/minus-outline';
 import PlusOutline from '~/components/icons/generated/plus-outline';
 import PlainSelect from '~/components/shared/plain-select';
 import SquareIconButton from '~/components/shared/square-icon-button';
+import { useFilterBox } from '../filter-box';
 
 function HeaderSection() {
+  const filterBox = useFilterBox();
+
   return (
     <Row
       position="sticky"
@@ -26,8 +29,10 @@ function HeaderSection() {
       mainAxisAlignment="space-between"
       px={4}
       py={1.25}
-      zIndex={4}
+      height={68}
+      zIndex={8}
       bgcolor="background.default"
+      flexShrink={0}
       sx={{ borderBottom: '1px solid', borderColor: 'divider' }}
     >
       <DisplayModeSelectionWidget />
@@ -36,7 +41,13 @@ function HeaderSection() {
         <DateRangeSelectionWidget />
         <RoomCountSelectionWidget />
       </Row>
-      <SquareIconButton size="large" sx={{ bgcolor: 'background.paper' }}>
+      <SquareIconButton
+        size="large"
+        onClick={() =>
+          filterBox.visible ? filterBox.hide() : filterBox.show()
+        }
+        sx={{ bgcolor: 'background.paper' }}
+      >
         <FilterOutline />
       </SquareIconButton>
     </Row>

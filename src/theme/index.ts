@@ -54,6 +54,18 @@ const theme = createTheme({
         disableElevation: true,
       },
     },
+    MuiChip: {
+      styleOverrides: {
+        filled: {
+          backgroundColor: 'black',
+          color: 'white',
+          border: '1px solid black',
+          '&:hover': {
+            backgroundColor: 'rgba(18, 18, 18)',
+          },
+        },
+      },
+    },
     MuiToggleButtonGroup: {
       styleOverrides: {
         root: ({ theme }) => ({
