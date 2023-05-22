@@ -3,7 +3,7 @@ import { Maybe } from '~/types';
 import {
   useLocationStateValue,
   useUpdateLocationState,
-} from '~/utils/use-location-state';
+} from '@xod/use-nextjs-location-state';
 import { Place } from '../types';
 
 type PlaceId = Place['id'];

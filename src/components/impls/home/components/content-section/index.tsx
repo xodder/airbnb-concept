@@ -85,6 +85,7 @@ function PlaceListItem({ place, onClick }: PlaceCardWidgetProps) {
       </Column>
       <Box position="absolute" top={8} right={8}>
         <IconButton
+          onClick={() => setLiked((x) => !x)}
           sx={{
             bgcolor: 'white',
             '&:hover': { bgcolor: 'black', color: 'white' },
@@ -93,7 +94,6 @@ function PlaceListItem({ place, onClick }: PlaceCardWidgetProps) {
           <HeartOutline
             color={liked ? 'primary' : 'inherit'}
             fontSize="xsmall"
-            onClick={() => setLiked((x) => !x)}
             sx={{
               strokeWidth: 2,
               fill: liked ? 'currentColor' : undefined,

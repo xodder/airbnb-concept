@@ -1,22 +1,12 @@
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import {
-  Hydrate,
-  QueryClient,
-  QueryClientConfig,
-  QueryClientProvider,
-} from '@tanstack/react-query';
-import { PopupIsh } from '@xod/mui-popupish';
 import { AppProps as NextAppProps } from 'next/app';
-import ErrorPresenter from '~/components/generics/error-presenter';
 import DefaultLayout from '~/components/layouts/default-layout';
 import DefaultGuard from '~/guards/default-guard';
 import defineComponent from '~/helpers/define-component';
 import theme from '~/theme';
 import { RecordLike } from '~/types';
-import AppStateProvider from '~/utils/app-state';
 import createEmotionCache from '~/utils/create-emotion-cache';
-import useConstant from '~/utils/use-constant';
 
 type AppProps = Omit<NextAppProps, 'Component' | 'pageProps'> & {
   emotionCache: EmotionCache;
@@ -33,32 +23,12 @@ type Component = NextAppProps['Component'] & {
 
 const __emotionCache = createEmotionCache(); // used on the client
 
-const __queryClientConfig: QueryClientConfig = {
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
-};
-
 function App({ emotionCache = __emotionCache, ...props }: AppProps) {
-  const queryClient = useConstant(() => new QueryClient(__queryClientConfig));
-  const __state__ = props.pageProps.__state__;
-
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <CssBaseline enableColorScheme />
-        <QueryClientProvider client={queryClient}>
-          <Hydrate state={__state__}>
-            <AppStateProvider>
-              <ErrorPresenter>
-                <ActivePage {...props} />
-              </ErrorPresenter>
-            </AppStateProvider>
-          </Hydrate>
-        </QueryClientProvider>
-        <PopupIsh />
+        <ActivePage {...props} />
       </ThemeProvider>
     </CacheProvider>
   );

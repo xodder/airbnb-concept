@@ -1,9 +1,9 @@
 import { Drawer } from '@mui/material';
-import _omit from 'lodash/omit';
 import {
   useLocationStateValue,
   useUpdateLocationState,
-} from '~/utils/use-location-state';
+} from '@xod/use-nextjs-location-state';
+import _omit from 'lodash/omit';
 import FilterBoxWidget from './widget';
 
 const offsetTop = 72 + 68; // appbar_height + header_section_height;
