@@ -14,7 +14,7 @@ function HostInfoSection() {
 
   return (
     <Column gap={3}>
-      <Typography fontWeight={700}>Host</Typography>
+      <Typography variant="h6">Host</Typography>
       <Column gap={2}>
         <Row gap={2} crossAxisAlignment="center">
           <Image
@@ -40,12 +40,12 @@ function HostInfoSection() {
         </Row>
         <Row gap={4} crossAxisAlignment="center">
           <IconText
-            icon={<Star fontSize="small" />}
+            icon={<Star />}
             text={`${host.review_count} reviews`}
             textProps={{ variant: 'subtitle2' }}
           />
           <IconText
-            icon={<ShieldOutline fontSize="small" />}
+            icon={<ShieldOutline />}
             text={host.verified ? 'Identity Verified' : 'Unverified'}
             textProps={{ variant: 'subtitle2' }}
           />

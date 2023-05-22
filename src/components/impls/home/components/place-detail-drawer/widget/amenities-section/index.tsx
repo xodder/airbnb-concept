@@ -15,20 +15,12 @@ function AmenitiesSection() {
 
   return (
     <Column gap={4}>
-      <Typography variant="body1" fontWeight={800}>
-        What this place offers
-      </Typography>
+      <Typography variant="h6">What this place offers</Typography>
       <Grid columnTemplate="repeat(3, 1fr)" spacing={4}>
         {place.amenities.map((amenity, i) => {
           const Icon = tagToIconMap[amenity.tag];
 
-          return (
-            <IconText
-              key={i}
-              icon={<Icon fontSize="small" />}
-              text={amenity.label}
-            />
-          );
+          return <IconText key={i} icon={<Icon />} text={amenity.label} />;
         })}
       </Grid>
       <Link

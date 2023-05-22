@@ -20,7 +20,7 @@ function RareFindSnippet() {
         fit="cover"
       />
       <Column>
-        <Typography fontWeight={700}>This is a rare find</Typography>
+        <Typography variant="h6">This is a rare find</Typography>
         <Typography variant="body2" color="text.secondary">
           Kathryn's place on Airbnb is usually fully booked.
         </Typography>

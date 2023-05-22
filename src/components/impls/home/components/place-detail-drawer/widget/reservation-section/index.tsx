@@ -36,7 +36,7 @@ function ReservationSection() {
             </Typography>
           </Typography>
           <IconText
-            icon={<Star fontSize="small" />}
+            icon={<Star />}
             text={nformat(place.rating, { minimumFractionDigits: 1 })}
           />
         </Row>
@@ -87,10 +87,7 @@ function FeeWidget({ label, sublabel, amount, emphasized }: FeeWidgetProps) {
       mainAxisAlignment="space-between"
     >
       <Column>
-        <Typography
-          variant={emphasized ? 'body1' : 'subtitle2'}
-          fontWeight={emphasized ? 700 : undefined}
-        >
+        <Typography variant={emphasized ? 'h6' : 'subtitle2'}>
           {label}
         </Typography>
         <Typography variant="caption" color="text.secondary">
@@ -111,9 +108,7 @@ function DatePickerField(props: DatePickerFieldProps) {
     <PlainTextField
       {...props}
       InputProps={{
-        startAdornment: (
-          <CalendarOutline fontSize="small" color="action" sx={{ mr: 2 }} />
-        ),
+        startAdornment: <CalendarOutline color="action" sx={{ mr: 2 }} />,
       }}
       fullWidth
     />

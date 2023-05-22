@@ -1,20 +1,20 @@
 import { createTheme } from '@mui/material';
 import { Inter } from 'next/font/google';
 
-const { breakpoints, shape } = createTheme();
+const { shape, typography } = createTheme();
 
 const font = Inter({
-  weight: ['400', '500', '600', '700', '900', '800'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
 });
 
 const theme = createTheme({
   typography: {
     fontFamily: font.style.fontFamily,
+    h6: { ...typography.body1, fontWeight: 700 },
   },
   palette: {
     primary: {
-      // main: 'rgb(255, 56, 92)',
       main: 'rgb(212, 59, 81)',
       dark: 'rgb(212, 59, 81)',
     },
@@ -89,23 +89,13 @@ const theme = createTheme({
         underline: 'none',
       },
     },
+    MuiSvgIcon: {
+      defaultProps: {
+        fontSize: 'small',
+      },
+    },
     MuiCssBaseline: {
       styleOverrides: {
-        'html, body': {
-          margin: 0,
-        },
-        html: {
-          fontSize: 16,
-          [breakpoints.up('xl')]: {
-            fontSize: 18,
-          },
-          [breakpoints.down('md')]: {
-            fontSize: 16,
-          },
-          [breakpoints.down('sm')]: {
-            fontSize: 14,
-          },
-        },
         '#__next': {
           position: 'relative',
         },

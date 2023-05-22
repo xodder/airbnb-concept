@@ -57,9 +57,7 @@ function PlaceListItem({ place, onClick }: PlaceCardWidgetProps) {
       </AspectRatio>
       <Column px={2} py={2} flex={1}>
         <Column gap={1}>
-          <Typography variant="body1" fontWeight={600}>
-            {place.name}
-          </Typography>
+          <Typography variant="h6">{place.name}</Typography>
           <Typography variant="body2" color="text.secondary">
             {place.location.name}
           </Typography>
@@ -78,7 +76,7 @@ function PlaceListItem({ place, onClick }: PlaceCardWidgetProps) {
           </Typography>
           <Flexible />
           <IconText
-            icon={<Star fontSize="small" />}
+            icon={<Star />}
             text={nformat(place.rating, { minimumFractionDigits: 1 })}
           />
         </Row>
@@ -90,7 +88,10 @@ function PlaceListItem({ place, onClick }: PlaceCardWidgetProps) {
             '&:hover': { bgcolor: 'black', color: 'white' },
           }}
         >
-          <HeartOutline color="inherit" sx={{ fontSize: 16, strokeWidth: 2 }} />
+          <HeartOutline
+            color="inherit"
+            sx={{ fontSize: '1rem', strokeWidth: 2 }}
+          />
         </IconButton>
       </Box>
     </Column>

@@ -10,12 +10,12 @@ function LocationInfoSection() {
 
   return (
     <Column gap={3} crossAxisAlignment="start">
-      <Typography fontWeight={700}>Where you'll be</Typography>
+      <Typography variant="h6">Where you'll be</Typography>
       <AspectRatio value={9 / 16}>
         <Box bgcolor="grey.200" borderRadius={5} />
       </AspectRatio>
       <Column gap={1}>
-        <Typography fontWeight={700}>{place.location.name}</Typography>
+        <Typography variant="h6">{place.location.name}</Typography>
         <RichText content={place.location.description as any} />
       </Column>
       <Link href="#" variant="body2" fontWeight={700} mui>

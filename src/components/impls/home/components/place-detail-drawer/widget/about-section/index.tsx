@@ -9,7 +9,7 @@ function AboutSection() {
 
   return (
     <Column gap={3}>
-      <Typography fontWeight={800}>About this Space</Typography>
+      <Typography variant="h6">About this Space</Typography>
       <RichText content={place.about as any} />
       <Link
         href="#"

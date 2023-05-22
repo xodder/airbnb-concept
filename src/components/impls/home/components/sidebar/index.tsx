@@ -48,7 +48,7 @@ const items: Item[] = [
 ];
 
 function Sidebar() {
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [selectedIndex] = React.useState(0);
   const [expanded, setExpanded] = React.useState(false);
 
   return (
@@ -100,11 +100,11 @@ function SidebarItem({ item, expanded, selected }: SidebarItemProps) {
           width: 3,
           top: 0,
           bottom: 0,
-          bgcolor: selected ? 'primary.dark' : 'transparent',
+          bgcolor: selected ? 'primary.main' : 'transparent',
         },
       }}
     >
-      {React.cloneElement(item.icon, { fontSize: 'small' })}
+      {item.icon}
       {expanded && (
         <Typography
           variant="subtitle2"

@@ -54,10 +54,10 @@ function DisplayModeSelectionWidget() {
       exclusive
     >
       <ToggleButton value="grid" sx={{ p: 1.8 }}>
-        <GridOutline fontSize="small" />
+        <GridOutline />
       </ToggleButton>
       <ToggleButton value="map" sx={{ p: 1.85 }}>
-        <MapOutline fontSize="small" />
+        <MapOutline />
       </ToggleButton>
     </ToggleButtonGroup>
   );
@@ -81,7 +81,7 @@ function DateRangeSelectionWidget() {
       py={1}
       borderRadius={3}
     >
-      <CalendarOutline fontSize="small" color="action" />
+      <CalendarOutline color="action" />
       <Typography variant="subtitle2">June 14 - 11</Typography>
     </Row>
   );
@@ -96,12 +96,12 @@ function RoomCountSelectionWidget() {
       p={1}
       borderRadius={3}
     >
-      <SquareIconButton sx={{ bgcolor: 'white', p: 0.75 }}>
-        <MinusOutline fontSize="small" sx={{ color: 'primary.dark' }} />
+      <SquareIconButton size="small" sx={{ bgcolor: 'white' }}>
+        <MinusOutline color="primary" />
       </SquareIconButton>
       <Typography variant="subtitle2">4 guests</Typography>
-      <SquareIconButton sx={{ bgcolor: 'white', p: 0.75 }}>
-        <PlusOutline fontSize="small" sx={{ color: 'primary.dark' }} />
+      <SquareIconButton size="small" sx={{ bgcolor: 'white' }}>
+        <PlusOutline color="primary" />
       </SquareIconButton>
     </Row>
   );

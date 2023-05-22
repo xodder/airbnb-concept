@@ -1,9 +1,10 @@
-import { Typography } from '@mui/material';
+import { IconButton, Typography } from '@mui/material';
 import { Column, Row, Spacer } from '@xod/mui-layout';
 import {
   BedOutline,
   BedroomOutline,
   GuestOutline,
+  HeartOutline,
   ShowerOutline,
 } from '~/components/icons';
 import IconText from '~/components/shared/icon-text';
@@ -17,15 +18,18 @@ function InfoSection() {
     <Column crossAxisAlignment="start">
       <SuperHostTag bordered />
       <Spacer sy={2} />
-      <Row crossAxisAlignment="start">
+      <Row gap={2} crossAxisAlignment="start" mainAxisAlignment="space-between">
         <Column gap={1}>
-          <Typography variant="h5" fontWeight={700}>
-            {place.name}
-          </Typography>
+          <Typography variant="h5">{place.name}</Typography>
           <Typography variant="body2" color="text.secondary">
             {place.location.name}
           </Typography>
         </Column>
+        <Row>
+          <IconButton>
+            <HeartOutline />
+          </IconButton>
+        </Row>
       </Row>
       <Spacer sy={3} />
       <Row gap={4}>

@@ -20,9 +20,9 @@ function ReviewsSection() {
         crossAxisAlignment="center"
         mainAxisAlignment="space-between"
       >
-        <Typography fontWeight={700}>Reviews</Typography>
+        <Typography variant="h6">Reviews</Typography>
         <IconText
-          icon={<Star fontSize="small" />}
+          icon={<Star />}
           text={`${formattedRating} — ${place.reviews.count} reviews`}
           textProps={{ variant: 'subtitle2' }}
         />
