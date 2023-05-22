@@ -7,6 +7,7 @@ specifiers:
   '@emotion/styled': ^11.10.6
   '@mui/material': ^5.11.16
   '@mui/system': ^5.13.1
+  '@mui/x-date-pickers': ^5.0.19
   '@types/lodash': ^4.14.192
   '@types/node': 18.15.11
   '@types/qs': ^6.9.7
@@ -16,6 +17,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.57.1
   '@xod/mui-layout': github:xodder/mui-layout
   '@xod/use-nextjs-location-state': github:xodder/use-nextjs-location-state
+  dayjs: ^1.11.7
   eslint: 8.38.0
   eslint-config-next: 13.3.0
   eslint-config-prettier: ^8.8.0
@@ -36,8 +38,10 @@ dependencies:
   '@emotion/styled': 11.10.6_wk7udrqmfetfur7bcmggr6k6fm
   '@mui/material': 5.11.16_zy4fdalh3zntkbuswwsbylvxqe
   '@mui/system': 5.13.1_hhds4wqx5d7xrjbeg7y66xx5iy
+  '@mui/x-date-pickers': 5.0.20_5pcpy6wbf5hjmkkjhli36lakam
   '@xod/mui-layout': github.com/xodder/mui-layout/70710eb20df9f0edebd6e1eeebfc319d56eb706e_46gwejg6dffllellg4ffkuclsi
   '@xod/use-nextjs-location-state': github.com/xodder/use-nextjs-location-state/f8cddabeaa050b9bd2140f660350bc834903b7a5_next@13.3.0+react@18.2.0
+  dayjs: 1.11.7
   lodash: 4.17.21
   next: 13.3.0_biqbaboplfbrettd7655fr4n2y
   qs: 6.11.1
@@ -116,6 +120,55 @@ packages:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
     dev: true
+
+  /@date-io/core/2.16.0:
+    resolution: {integrity: sha512-DYmSzkr+jToahwWrsiRA2/pzMEtz9Bq1euJwoOuYwuwIYXnZFtHajY2E6a1VNVDc9jP8YUXK1BvnZH9mmT19Zg==}
+    dev: false
+
+  /@date-io/date-fns/2.16.0:
+    resolution: {integrity: sha512-bfm5FJjucqlrnQcXDVU5RD+nlGmL3iWgkHTq3uAZWVIuBu6dDmGa3m8a6zo2VQQpu8ambq9H22UyUpn7590joA==}
+    peerDependencies:
+      date-fns: ^2.0.0
+    peerDependenciesMeta:
+      date-fns:
+        optional: true
+    dependencies:
+      '@date-io/core': 2.16.0
+    dev: false
+
+  /@date-io/dayjs/2.16.0_dayjs@1.11.7:
+    resolution: {integrity: sha512-y5qKyX2j/HG3zMvIxTobYZRGnd1FUW2olZLS0vTj7bEkBQkjd2RO7/FEwDY03Z1geVGlXKnzIATEVBVaGzV4Iw==}
+    peerDependencies:
+      dayjs: ^1.8.17
+    peerDependenciesMeta:
+      dayjs:
+        optional: true
+    dependencies:
+      '@date-io/core': 2.16.0
+      dayjs: 1.11.7
+    dev: false
+
+  /@date-io/luxon/2.16.1:
+    resolution: {integrity: sha512-aeYp5K9PSHV28946pC+9UKUi/xMMYoaGelrpDibZSgHu2VWHXrr7zWLEr+pMPThSs5vt8Ei365PO+84pCm37WQ==}
+    peerDependencies:
+      luxon: ^1.21.3 || ^2.x || ^3.x
+    peerDependenciesMeta:
+      luxon:
+        optional: true
+    dependencies:
+      '@date-io/core': 2.16.0
+    dev: false
+
+  /@date-io/moment/2.16.1:
+    resolution: {integrity: sha512-JkxldQxUqZBfZtsaCcCMkm/dmytdyq5pS1RxshCQ4fHhsvP5A7gSqPD22QbVXMcJydi3d3v1Y8BQdUKEuGACZQ==}
+    peerDependencies:
+      moment: ^2.24.0
+    peerDependenciesMeta:
+      moment:
+        optional: true
+    dependencies:
+      '@date-io/core': 2.16.0
+    dev: false
 
   /@emotion/babel-plugin/11.10.6:
     resolution: {integrity: sha512-p2dAqtVrkhSa7xz1u/m9eHYdLi+en8NowrmXeF/dKtJpU8lCWli8RUAati7NcSl0afsBott48pdnANuD0wh9QQ==}
@@ -360,7 +413,7 @@ packages:
       '@babel/runtime': 7.21.0
       '@emotion/is-prop-valid': 1.2.0
       '@mui/types': 7.2.3_@types+react@18.0.33
-      '@mui/utils': 5.11.13_react@18.2.0
+      '@mui/utils': 5.13.1_react@18.2.0
       '@popperjs/core': 2.11.7
       '@types/react': 18.0.33
       clsx: 1.2.1
@@ -527,6 +580,55 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-is: 18.2.0
+    dev: false
+
+  /@mui/x-date-pickers/5.0.20_5pcpy6wbf5hjmkkjhli36lakam:
+    resolution: {integrity: sha512-ERukSeHIoNLbI1C2XRhF9wRhqfsr+Q4B1SAw2ZlU7CWgcG8UBOxgqRKDEOVAIoSWL+DWT6GRuQjOKvj6UXZceA==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@emotion/react': ^11.9.0
+      '@emotion/styled': ^11.8.1
+      '@mui/material': ^5.4.1
+      '@mui/system': ^5.4.1
+      date-fns: ^2.25.0
+      dayjs: ^1.10.7
+      luxon: ^1.28.0 || ^2.0.0 || ^3.0.0
+      moment: ^2.29.1
+      react: ^17.0.2 || ^18.0.0
+      react-dom: ^17.0.2 || ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/react':
+        optional: true
+      '@emotion/styled':
+        optional: true
+      date-fns:
+        optional: true
+      dayjs:
+        optional: true
+      luxon:
+        optional: true
+      moment:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@date-io/core': 2.16.0
+      '@date-io/date-fns': 2.16.0
+      '@date-io/dayjs': 2.16.0_dayjs@1.11.7
+      '@date-io/luxon': 2.16.1
+      '@date-io/moment': 2.16.1
+      '@emotion/react': 11.10.6_pofolu2o2erjq4lhyzl3hqovzq
+      '@emotion/styled': 11.10.6_wk7udrqmfetfur7bcmggr6k6fm
+      '@mui/material': 5.11.16_zy4fdalh3zntkbuswwsbylvxqe
+      '@mui/system': 5.13.1_hhds4wqx5d7xrjbeg7y66xx5iy
+      '@mui/utils': 5.13.1_react@18.2.0
+      '@types/react-transition-group': 4.4.5
+      clsx: 1.2.1
+      dayjs: 1.11.7
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-transition-group: 4.4.5_biqbaboplfbrettd7655fr4n2y
+      rifm: 0.12.1_react@18.2.0
     dev: false
 
   /@next/env/13.3.0:
@@ -1153,6 +1255,10 @@ packages:
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
     dev: true
+
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+    dev: false
 
   /debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
@@ -2683,6 +2789,14 @@ packages:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
+
+  /rifm/0.12.1_react@18.2.0:
+    resolution: {integrity: sha512-OGA1Bitg/dSJtI/c4dh90svzaUPt228kzFsUkJbtA2c964IqEAwWXeL9ZJi86xWv3j5SMqRvGULl7bA6cK0Bvg==}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /rimraf/3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}

@@ -1,12 +1,16 @@
 import { Button, MenuItem, Typography } from '@mui/material';
+import { LocalizationProvider, MobileDatePicker } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Column, Row } from '@xod/mui-layout';
+import dayjs from 'dayjs';
 import { CalendarOutline, Star } from '~/components/icons';
 import Divider from '~/components/shared/divider';
 import IconText from '~/components/shared/icon-text';
 import PlainTextField from '~/components/shared/plain-textfield';
-import { TextFieldProps } from '~/components/shared/textfield';
+import { Maybe } from '~/types';
 import cformat from '~/utils/cformat';
 import nformat from '~/utils/nformat';
+import useControlled from '~/utils/use-controlled';
 import { useActivePlace } from '../../provider';
 
 function ReservationSection() {
@@ -38,8 +42,13 @@ function ReservationSection() {
           <IconText icon={<Star />} text={nformat(place.rating)} />
         </Row>
         <Row gap={2} crossAxisAlignment="center">
-          <DatePickerField label="Check In" defaultValue="6/14/2023" />
-          <DatePickerField label="Check Out" defaultValue="6/21/2023" />
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePickerFieldX label="Check In" defaultValue={new Date()} />
+            <DatePickerFieldX
+              label="Check Out"
+              defaultValue={dayjs().add(6, 'd').toDate()}
+            />
+          </LocalizationProvider>
         </Row>
         <PlainTextField label="Guests" defaultValue="1" raisedLabel select>
           <MenuItem value="1">1 guest</MenuItem>
@@ -98,16 +107,61 @@ function FeeWidget({ label, sublabel, amount, emphasized }: FeeWidgetProps) {
   );
 }
 
-type DatePickerFieldProps = TextFieldProps;
+type DatePickerFieldXProps = {
+  label: string;
+  value?: Maybe<Date>;
+  onChange?: (value: Maybe<Date> | undefined) => void;
+  defaultValue?: Date;
+};
 
-function DatePickerField(props: DatePickerFieldProps) {
+function DatePickerFieldX({
+  value: valueProp,
+  label,
+  defaultValue,
+  onChange,
+}: DatePickerFieldXProps) {
+  const [value, setValue] = useControlled({
+    controlled: valueProp,
+    default: defaultValue,
+  });
+
+  function handleChange(value: Maybe<Date> | undefined) {
+    setValue(value);
+    onChange?.(value);
+  }
+
   return (
-    <PlainTextField
-      {...props}
-      InputProps={{
-        startAdornment: <CalendarOutline color="action" sx={{ mr: 2 }} />,
+    <MobileDatePicker
+      toolbarTitle="Due on"
+      value={value}
+      inputFormat="M/DD/YYYY"
+      onChange={handleChange}
+      componentsProps={{ actionBar: { actions: [] } }}
+      renderInput={(props) => {
+        return (
+          <PlainTextField
+            {...props}
+            label={label}
+            InputProps={{
+              startAdornment: (
+                <CalendarOutline color="action" sx={{ mr: 2, mt: -0.25 }} />
+              ),
+              sx: { cursor: 'pointer' },
+              inputProps: {
+                disabled: true,
+                style: {
+                  pointerEvents: 'none',
+                },
+              },
+            }}
+            fullWidth
+          />
+        );
       }}
-      fullWidth
+      disablePast
+      disableHighlightToday
+      disableMaskedInput
+      closeOnSelect
     />
   );
 }
