@@ -48,7 +48,7 @@ const items: Item[] = [
 ];
 
 function Sidebar() {
-  const [selectedIndex] = React.useState(0);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [expanded, setExpanded] = React.useState(false);
 
   return (
@@ -69,6 +69,7 @@ function Sidebar() {
           item={item}
           expanded={expanded}
           selected={selectedIndex === index}
+          onSelect={() => setSelectedIndex(index)}
         />
       ))}
     </Column>
@@ -79,9 +80,10 @@ type SidebarItemProps = {
   item: Item;
   selected?: boolean;
   expanded?: boolean;
+  onSelect?: () => void;
 };
 
-function SidebarItem({ item, expanded, selected }: SidebarItemProps) {
+function SidebarItem({ item, expanded, selected, onSelect }: SidebarItemProps) {
   return (
     <Row
       position="relative"
@@ -91,7 +93,9 @@ function SidebarItem({ item, expanded, selected }: SidebarItemProps) {
       gap={2}
       height={48}
       width={1}
+      onClick={() => onSelect?.()}
       sx={{
+        cursor: 'pointer',
         '&:hover': { bgcolor: 'background.paper' },
         '&::after': {
           content: "''",
