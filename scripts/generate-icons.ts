@@ -79,7 +79,7 @@ async function extractSvgData(filePath: string) {
     const content = (await fs.readFile(filePath)).toString();
 
     // extract viewBox
-    let viewBox = content.match(/viewBox="([\d\s.]+)"/)?.[1];
+    let viewBox = content.match(/viewBox="([\d\s-.]+)"/)?.[1];
 
     if (!viewBox) {
       const width = content.match(/width="([\d.]+)"/)?.[1];
