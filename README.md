@@ -1,30 +1,12 @@
-# next-mui
-A NextJs starter kit for [mui](https://mui.com/material-ui).
+# airbnb-concept
+An implementation of [https://dribbble.com/shots/21302099-Airbnb-Concept-Built-in-Framer](https://dribbble.com/shots/21302099-Airbnb-Concept-Built-in-Framer) in [Next.js](http://nextjs.org/) (a React.js framework)
 
-## Getting Started
-To create a new project using this as a template, run:
+## Usage
+To get this project running, run:
 
 ```console
-$ pnpm create next-app --example https://github.com/xodder/next-mui <project-name>
+$ pnpm i            # install packages
+$ pnpm dev -p 5000  # start the development server on port 5000
 ```
+Then open _http://localhost:5000_ in the browser
 
-## Directory Structure
-```markdown
-<project>
-├── public
-├── scripts
-└── src
-    ├── api
-    │   └── helpers
-    ├── components
-    │   ├── generics
-    │   ├── impls
-    │   ├── layouts
-    │   └── shared
-    ├── config
-    ├── guards
-    ├── helpers
-    ├── pages
-    ├── theme
-    └── utils
-```
