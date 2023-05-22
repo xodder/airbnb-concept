@@ -1,4 +1,3 @@
-import { Box, Drawer } from '@mui/material';
 import { Column, Row } from '@xod/mui-layout';
 import React from 'react';
 import PageSEO from '~/components/shared/page-seo';

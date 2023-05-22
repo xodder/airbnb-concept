@@ -2,7 +2,7 @@
 import fs from 'fs/promises';
 import { camelCase, startCase } from 'lodash';
 import path from 'path';
-import { error__, info__ } from './utils/message';
+import { info__ } from './utils/message';
 import writeContentToFile from './utils/write-content-to-file';
 
 const SRC_DIR = path.resolve(__dirname, '../src');
@@ -65,7 +65,7 @@ export default createIcon('${iconPath}', '${componentName}', '${data.viewBox}');
 
       info__('created %s', componentFileName);
     } catch (e) {
-      info__(e.message);
+      info__((e as Error).message);
     }
   }
 

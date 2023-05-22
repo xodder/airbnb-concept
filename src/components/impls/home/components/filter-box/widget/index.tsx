@@ -139,8 +139,6 @@ function EntityCountSelectionWidget({
   onChange,
 }: EntityCountSelectionWidgetProps) {
   const [value, setValue] = useControlled({
-    name: 'EntityCountSelectionWidget',
-    state: 'value',
     controlled: valueProp,
     default: defaultValue,
   });

@@ -13,15 +13,14 @@
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.16",
+    "@mui/system": "^5.13.1",
     "@xod/mui-layout": "github:xodder/mui-layout",
     "@xod/use-nextjs-location-state": "github:xodder/use-nextjs-location-state",
-    "axios": "^1.3.5",
     "lodash": "^4.17.21",
     "next": "13.3.0",
     "qs": "^6.11.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "use-nextjs-location-state": "github:xodder/use-nextjs-location-state"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.192",
