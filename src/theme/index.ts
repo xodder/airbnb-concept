@@ -19,6 +19,7 @@ const theme = createTheme({
     fontFamily: font.style.fontFamily,
     h5: { fontWeight: 800 },
     h6: { ...typography.body1, fontWeight: 700 },
+    subtitle2: { lineHeight: 1.25 },
   },
   palette: {
     primary: {

@@ -94,10 +94,7 @@ function PlaceListItem({ place, onClick }: PlaceCardWidgetProps) {
           <HeartOutline
             color={liked ? 'primary' : 'inherit'}
             fontSize="xsmall"
-            sx={{
-              strokeWidth: 2,
-              fill: liked ? 'currentColor' : undefined,
-            }}
+            sx={{ strokeWidth: 2, fill: liked ? 'currentColor' : undefined }}
           />
         </IconButton>
       </Box>
