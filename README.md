@@ -1,5 +1,5 @@
 # airbnb-concept
-An implementation of [https://dribbble.com/shots/21302099-Airbnb-Concept-Built-in-Framer](https://dribbble.com/shots/21302099-Airbnb-Concept-Built-in-Framer) in [Next.js](http://nextjs.org/)
+An implementation of [https://dribbble.com/shots/21302099-Airbnb-Concept-Built-in-Framer](https://dribbble.com/shots/21302099-Airbnb-Concept-Built-in-Framer) in [Next.js](http://nextjs.org/) (a React.js framework)
 
 ## Usage
 To get this project running, run:
