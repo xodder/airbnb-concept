@@ -1,3 +1,4 @@
+import pluralize from 'pluralize';
 import {
   MenuItem,
   ToggleButton,
@@ -115,7 +116,9 @@ function RoomCountSelectionWidget() {
       >
         <MinusOutline color="primary" />
       </SquareIconButton>
-      <Typography variant="subtitle2">{count} guests</Typography>
+      <Typography variant="subtitle2">
+        {pluralize('guest', count, true)}
+      </Typography>
       <SquareIconButton
         size="small"
         onClick={() => setCount((x) => Math.min(x + 1, 20))}
