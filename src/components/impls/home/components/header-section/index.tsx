@@ -26,9 +26,9 @@ function HeaderSection() {
       mainAxisAlignment="space-between"
       px={4}
       py={1.25}
-      sx={{ borderBottom: '1px solid', borderColor: 'divider' }}
       zIndex={4}
       bgcolor="background.default"
+      sx={{ borderBottom: '1px solid', borderColor: 'divider' }}
     >
       <DisplayModeSelectionWidget />
       <Row gap={2}>
@@ -50,13 +50,12 @@ function DisplayModeSelectionWidget() {
     <ToggleButtonGroup
       value={value}
       onChange={(_, newValue) => setValue(newValue || value)}
-      sx={{ border: 'none', borderRadius: 2.5 }}
       exclusive
     >
-      <ToggleButton value="grid" sx={{ p: 1.8 }}>
+      <ToggleButton value="grid">
         <GridOutline />
       </ToggleButton>
-      <ToggleButton value="map" sx={{ p: 1.85 }}>
+      <ToggleButton value="map">
         <MapOutline />
       </ToggleButton>
     </ToggleButtonGroup>
@@ -88,6 +87,8 @@ function DateRangeSelectionWidget() {
 }
 
 function RoomCountSelectionWidget() {
+  const [count, setCount] = React.useState(4);
+
   return (
     <Row
       crossAxisAlignment="center"
@@ -96,11 +97,19 @@ function RoomCountSelectionWidget() {
       p={1}
       borderRadius={3}
     >
-      <SquareIconButton size="small" sx={{ bgcolor: 'white' }}>
+      <SquareIconButton
+        size="small"
+        onClick={() => setCount((x) => Math.max(x - 1, 1))}
+        sx={{ bgcolor: 'white' }}
+      >
         <MinusOutline color="primary" />
       </SquareIconButton>
-      <Typography variant="subtitle2">4 guests</Typography>
-      <SquareIconButton size="small" sx={{ bgcolor: 'white' }}>
+      <Typography variant="subtitle2">{count} guests</Typography>
+      <SquareIconButton
+        size="small"
+        onClick={() => setCount((x) => Math.min(x + 1, 20))}
+        sx={{ bgcolor: 'white' }}
+      >
         <PlusOutline color="primary" />
       </SquareIconButton>
     </Row>

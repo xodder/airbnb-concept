@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material';
 import { Inter } from 'next/font/google';
 
-const { shape, typography } = createTheme();
+const { shape, typography, spacing } = createTheme();
 
 const font = Inter({
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -51,6 +51,8 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           background: 'rgb(243, 243, 242)',
+          border: 'none',
+          borderRadius: 3 * shape.borderRadius,
         },
       },
     },
@@ -59,6 +61,7 @@ const theme = createTheme({
         root: {
           borderRadius: 'inherit',
           border: 'none',
+          p: spacing(1.8),
           '&.Mui-selected': {
             color: 'white',
             background: 'rgb(17, 17, 17)',

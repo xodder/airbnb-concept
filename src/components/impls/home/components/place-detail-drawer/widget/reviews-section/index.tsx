@@ -10,7 +10,6 @@ import { useActivePlace } from '../../provider';
 
 function ReviewsSection() {
   const place = useActivePlace();
-  const formattedRating = nformat(place.rating, { minimumFractionDigits: 1 });
   const stats = place.reviews.stats;
 
   return (
@@ -23,8 +22,7 @@ function ReviewsSection() {
         <Typography variant="h6">Reviews</Typography>
         <IconText
           icon={<Star />}
-          text={`${formattedRating} — ${place.reviews.count} reviews`}
-          textProps={{ variant: 'subtitle2' }}
+          text={`${nformat(place.rating)} — ${place.reviews.count} reviews`}
         />
       </Row>
       <Column
@@ -75,9 +73,7 @@ function ReviewStatItem({ label, value }: ReviewStatItemProps) {
         value={(value / 5) * 100}
         sx={{ width: 1, height: 8, borderRadius: 2 }}
       />
-      <Typography variant="subtitle2">
-        {nformat(value, { minimumFractionDigits: 1 })}
-      </Typography>
+      <Typography variant="subtitle2">{nformat(value)}</Typography>
     </Row>
   );
 }

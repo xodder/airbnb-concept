@@ -3,13 +3,12 @@ function cformat(amount: number, options: Intl.NumberFormatOptions = {}) {
     return undefined;
   }
 
-  options.currency = options.currency || 'USD';
-
   return new Intl.NumberFormat('en-US', {
+    currency: 'USD',
+    minimumFractionDigits: 0,
     ...options,
     style: 'currency',
   }).format(amount);
-  // .replace('NGN', options.currency === null ? '' : '₦');
 }
 
 export default cformat;

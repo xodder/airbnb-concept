@@ -25,7 +25,7 @@ function ReservationSection() {
         <Row crossAxisAlignment="center" mainAxisAlignment="space-between">
           <Typography>
             <Typography component="span" variant="h5" fontWeight={800}>
-              {cformat(pricing.per_night, { minimumFractionDigits: 0 })}
+              {cformat(pricing.per_night)}
             </Typography>
             <Typography
               component="span"
@@ -35,10 +35,7 @@ function ReservationSection() {
               &nbsp;/&nbsp;night
             </Typography>
           </Typography>
-          <IconText
-            icon={<Star />}
-            text={nformat(place.rating, { minimumFractionDigits: 1 })}
-          />
+          <IconText icon={<Star />} text={nformat(place.rating)} />
         </Row>
         <Row gap={2} crossAxisAlignment="center">
           <DatePickerField label="Check In" defaultValue="6/14/2023" />
@@ -95,7 +92,7 @@ function FeeWidget({ label, sublabel, amount, emphasized }: FeeWidgetProps) {
         </Typography>
       </Column>
       <Typography variant={emphasized ? 'body1' : 'subtitle2'} align="right">
-        {cformat(amount, { minimumFractionDigits: 0 })}
+        {cformat(amount)}
       </Typography>
     </Row>
   );
