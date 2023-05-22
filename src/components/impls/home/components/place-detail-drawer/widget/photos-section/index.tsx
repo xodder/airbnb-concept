@@ -1,7 +1,7 @@
-import { Box, Button } from '@mui/material';
+import { Box, BoxProps, Button } from '@mui/material';
 import { Grid } from '@xod/mui-layout';
 import AspectRatio from '~/components/shared/aspect-ratio';
-import Image from '~/components/shared/image';
+import Image, { ImageProps } from '~/components/shared/image';
 import { useActivePlace } from '../../provider';
 
 function PhotosSection() {
@@ -16,33 +16,9 @@ function PhotosSection() {
           spacing={2}
           height={1}
         >
-          <Image
-            src={place.photo_urls[0]}
-            alt=""
-            borderRadius={3}
-            fit="cover"
-            width={1}
-            height={1}
-            sx={{ gridColumn: '1/2', gridRow: '1/3' }}
-          />
-          <Image
-            src={place.photo_urls[1]}
-            alt=""
-            borderRadius={3}
-            fit="cover"
-            width={1}
-            height={1}
-            sx={{ gridColumn: '2/3', gridRow: '1/2' }}
-          />
-          <Image
-            src={place.photo_urls[2]}
-            alt=""
-            borderRadius={3}
-            fit="cover"
-            width={1}
-            height={1}
-            sx={{ gridColumn: '2/3', gridRow: '2/3' }}
-          />
+          <GridImage src={place.photo_urls[0]} column="1/2" row="1/3" />
+          <GridImage src={place.photo_urls[1]} column="2/3" row="1/2" />
+          <GridImage src={place.photo_urls[2]} column="2/3" row="2/3" />
         </Grid>
       </AspectRatio>
       <Box position="absolute" bottom={16} left={16}>
@@ -55,6 +31,27 @@ function PhotosSection() {
           View All Photos
         </Button>
       </Box>
+    </Box>
+  );
+}
+
+type GridImageProps = {
+  column: BoxProps['gridColumn'];
+  row: BoxProps['gridRow'];
+} & Pick<ImageProps, 'src'>;
+
+function GridImage({ src, column, row }: GridImageProps) {
+  return (
+    <Box position="relative" gridColumn={column} gridRow={row}>
+      <Image
+        type="bg"
+        src={src}
+        alt=""
+        borderRadius={3}
+        fit="cover"
+        width={1}
+        height={1}
+      />
     </Box>
   );
 }
